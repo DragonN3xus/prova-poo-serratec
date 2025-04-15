@@ -1,7 +1,5 @@
 # 📚 Prova POO - Serratec
 
-Repositório com a minha resolução da prova da turma de Nova Friburgo de Programação Orientada a Objetos (POO) do curso **Residencia em Tic / Software do Serratec 2025.1**.
-
 ## 🗣️ Opinião Pessoal
 Embora esteje iniciando meu aprendizado em POO e na linguagem Java, considerei a execução desta tarefa simples, mesmo ainda tendo certa dificuldade para trabalhar com classes abstradas, mas não possuindo duvidas as acerca dos pilares da Programação Orientada a Objetos.
 
