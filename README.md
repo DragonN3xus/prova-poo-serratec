@@ -9,5 +9,5 @@ Para os interresados em testar o codigo por si mesmos:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/DragonN3xus/prova-poo-serratec.git
-2. Importe o projeto em sua IDE Java de preferência.
+2. Importe o projeto em sua IDE Java de sua preferência.
 3. Compile e execute a classe desejada dentro dos pacotes de acordo com o exercício.
