@@ -48,11 +48,24 @@ public class PalestraApp {
 			}
 			
 		} while (opcao != 1 && opcao != 2);
-		 sc.nextLine();
-		 System.out.print("Informe o nome: ");
-		 String nome = sc.nextLine();
-		 System.out.print("Informe o CPF: ");
-		 String cpf = sc.nextLine();
+
+		sc.nextLine();
+		System.out.print("Informe o nome: ");
+		String nome = sc.nextLine();
+		String cpf;
+		boolean cpfValido;
+
+		do {
+			System.out.print("Informe o CPF (Apenas Números): ");
+			cpf = sc.nextLine();
+		    cpf = cpf.replaceAll("[^0-9]", "");
+			cpfValido = validarCPF(cpf);
+
+			if (!cpfValido) {
+				System.out.println("Por favor, informe um CPF válido.");
+			}
+		} while (!cpfValido);
+			
 		 if(opcao == 1) {
 			 System.out.print("Informe o email: ");
 			 String email = sc.nextLine();
@@ -83,8 +96,23 @@ public class PalestraApp {
 	                System.out.println(" | Tipo: Participante");
 	            }
 	        }
-		
 	}
+	 
+	 private static boolean validarCPF(String cpf) {
+		    if (cpf.length() != 11) {
+		        System.out.println("CPF inválido! Um CPF deve conter 11 dígitos.");
+		        return false;
+		    }
+		    
+		    for (Pessoa pessoa : pessoas) {
+		        if (pessoa.getCpf().equals(cpf)) {
+		            System.out.println("CPF já cadastrado no sistema!");
+		            return false;
+		        }
+		    }
+		    
+		    return true;
+		}
 	 
 	 
 }
